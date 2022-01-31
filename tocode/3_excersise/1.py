@@ -10,13 +10,15 @@ username = input('\nenter your username: ')
 password = input('enter your password: ')
 
 
-def auth(u, p):
+def auth():
     with open('password.log', 'r', encoding='UTF-8') as f:
-        for line in f.readlines():
+        for line in f:
+            print(line)
             temp = line.split()
             user_name = temp[3]
             pass_word = temp[1].split(',')
-            pass_word = pass_word[1]
+            pass_word = pass_word[0]
+            # print(f'@{pass_word}@')
             if u == user_name:
                 print(f'hi, {u}')
             else:
@@ -31,4 +33,4 @@ def auth(u, p):
                 break
 
 
-auth(username, password)
+auth()
