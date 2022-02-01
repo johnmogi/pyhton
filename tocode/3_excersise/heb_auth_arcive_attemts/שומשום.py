@@ -3,6 +3,7 @@ alert = 'השודדים באים, נוס על חייך פולש!'
 tries = 0
 with open('סיסמאות.txt', 'r', encoding='UTF-8') as f:
     file_content = f.readlines()
+    print(file_content, end="")
     username = input(f"מי מעז להטריד את שלוותי? \n")
     # this happens now 4 times, hence the loop:
     for line in file_content:
