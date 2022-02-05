@@ -1,10 +1,8 @@
 class MyCounter:
-    result = 0
+    count = 0
 
-    def count(self):
-        return 1
-        # self.result += self.result
-        # return self.result
+    def __init__(self):
+        MyCounter.count += 1
 
 for _ in range(10):
      c1 = MyCounter()
